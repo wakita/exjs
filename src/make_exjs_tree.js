@@ -102,8 +102,8 @@
                 // look for a parser already generated from same pegjs code.
                 if (debug) console.log('Looking for a parser generated from same pegjs code ...');
                 parserFile = parserDir + hash(macro, jsxRevision) + '-parser.js';
-                path.exists(parserDir, function(dir) {
-                    path.exists(parserFile, function(file) {
+                fs.exists(parserDir, function(dir) {
+                    fs.exists(parserFile, function(file) {
                         if (file) {
                             if (debug) console.log('Find a parser');
                             parser = require(parserFile);

@@ -23,6 +23,6 @@ expandedfile=$converted_dir/$base-expanded.*
 
 time $EXJS/make_exjs_tree.js $input_js &&
 time $EXJS/convert-json-simple.scm $treefile &&
-time $EXJS/expand-scm-simple.scm $sformfile &&
+time $EXJS/expand-sexp.scm $sformfile &&
 chmod 644 $expandedfile
 
